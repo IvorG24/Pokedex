@@ -7,43 +7,88 @@
   <style>
     /* Basic styling for Pokémon details */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    header {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 14px 0;
-    }
+header {
+  background-color: #f02020;
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+}
 
-    .pokemon-details {
-      text-align: center;
-      margin: 20px;
-    }
+.pokemon-details {
+  text-align: center;
+  margin: 20px;
+}
 
-    img {
-      max-width: 100%;
-    }
+img {
+  max-width: 100%;
+  border: 2px solid #fff; /* Add a white border around the Pokémon image */
+  border-radius: 10px; /* Add border-radius for a rounded appearance */
+}
 
-    .abilities {
-      margin-top: 20px;
-    }
+h2 {
+  color: #333; /* Set a dark color for Pokémon names */
+}
+
+p {
+  color: #555; /* Set a slightly lighter color for descriptions */
+}
+
+.abilities,
+.moves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.abilities h3,
+.moves h3 {
+  color: #000; /* Set a dark color for section headers */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.abilities div,
+.moves div {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
 
     .moves {
-      margin-top: 20px;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000; /* Add your desired border properties here */
+  border-radius: 10px; /* Adjust the border-radius according to your preference */
+  padding: 10px; /* Add padding for better visual appearance */
+}
+
+
+
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="flex flex-row">
     <h1>Pokémon Details</h1>
   </header>
 
-  <div class="pokemon-details" id="pokemonDetails"></div>
+  <div class="pokemon-details f" id="pokemonDetails"></div>
 
   <script>
     async function fetchData(url) {
@@ -64,6 +109,7 @@
       const image = document.createElement('img');
       image.src = pokemon.sprites.front_default;
       image.alt = pokemon.name;
+      image.style.width = '30%'
       pokemonDetailsDiv.appendChild(image);
       const descriptionParagraph = document.createElement('p');
       descriptionParagraph.textContent = description;
@@ -86,7 +132,7 @@
 
       // Display moves
       const movesDiv = document.createElement('div');
-      movesDiv.classList.add('moves');
+      movesDiv.classList.add('moves'); // Add the 'moves' class
       const movesHeader = document.createElement('h3');
       movesHeader.textContent = 'Moves:';
       movesDiv.appendChild(movesHeader);
@@ -98,6 +144,7 @@
       });
       movesDiv.appendChild(movesList);
       pokemonDetailsDiv.appendChild(movesDiv);
+
 
       // Add more details as needed
     }
