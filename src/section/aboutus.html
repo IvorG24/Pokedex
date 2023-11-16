@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <title>About Us</title>
+</head>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  font-family: 'Righteous', cursive;
+}
+
+.about-section {
+  text-align: center;
+  padding: 80px;
+  background-color: #333;
+  color: white;
+}
+
+.about-section h1 {
+  font-size: 40px;
+}
+
+.about-section p {
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.column {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.column:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #888;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 600px) {
+  .about-section {
+    padding: 40px;
+  }
+
+  .about-section h1 {
+    font-size: 30px;
+  }
+
+  .about-section p {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    max-width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+</style>
+<body>
+    <nav>
+        <div class="wrapper">
+          
+          <div class="right">
+            <a href="pokelanding.html">
+              <img src="../assets/pokedex-removebg-preview.png" alt="">
+            </a>
+            <a href="pokelist.html">Pokedex</a>
+          </div>  
+        </div>
+    </nav>
+
+    <div class="about-section">
+        <h1>About Us</h1>
+        <p>Some text about who we are and what we do.</p>
+        <p>Resize the browser window to see that this page is responsive by the way.</p>
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="/src/assets/ivor.jpg" alt="Ivor" style="width:100%">
+            <div class="container">
+              <h2>Mark Ivor Glorioso</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>ivor@example.com</p>
+              <p><a href="https://www.facebook.com/Ivor.glorioso" class="button">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/src/assets/tanlee.png" alt="Tanlee" style="width:100%">
+            <div class="container">
+              <h2>Stanlee Hayes Inosanto</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>istanleehayes@gmail.com</p>
+              <p><a href="https://www.facebook.com/inosanto14/" class="button">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div> 
+</body>
+</html>

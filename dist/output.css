@@ -229,6 +229,8 @@ button,
 [type='submit'] {
   -webkit-appearance: button;
   /* 1 */
+  appearance: button;
+  /* 1 */
   background-color: transparent;
   /* 2 */
   background-image: none;
@@ -273,12 +275,22 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
-  -webkit-appearance: textfield;
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
   /* 1 */
-  outline-offset: -2px;
+  -moz-appearance: button;
+  /* 1 */
+  appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
   /* 2 */
 }
+
 
 /*
 Remove the inner padding in Chrome and Safari on macOS.
@@ -413,9 +425,8 @@ iframe,
 embed,
 object {
   display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
+  /* Remove 'vertical-align: middle' */
+  margin: 0 auto; /* Center horizontally */
 }
 
 /*
