@@ -6,14 +6,44 @@
   <title>Pokémon Details</title>
   <style>
     /* Basic styling for Pokémon details */
+    
     body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  position: relative; /* Add positioning context */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/poke-open.gif') fixed center;
+  background-size: cover;
+  z-index: -1; /* Send it to the back */
+  opacity: 0.8; /* Adjust the opacity if needed */
+}
+
+body {
+  background: linear-gradient(to bottom, rgba(228, 46, 5, 0.97), #f4f4f400);
+  z-index: 1;
+  position: relative; /* Ensure the z-index works */
+  animation: fade-in 4s forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
-  background-color: #f02020;
   color: white;
   text-align: center;
   padding: 14px 0;
@@ -24,11 +54,6 @@ header {
   margin: 20px;
 }
 
-img {
-  max-width: 100%;
-  border: 2px solid #fff; /* Add a white border around the Pokémon image */
-  border-radius: 10px; /* Add border-radius for a rounded appearance */
-}
 
 h2 {
   color: #333; /* Set a dark color for Pokémon names */
@@ -47,7 +72,7 @@ p {
   border: 2px solid #000;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .abilities h3,
@@ -78,14 +103,16 @@ ul {
   padding: 10px; /* Add padding for better visual appearance */
 }
 
-
+.pokemontitle{
+  width: 25%;
+}
 
   </style>
 </head>
 <body>
 
   <header class="flex flex-row">
-    <h1>Pokémon Details</h1>
+   <img class="pokemontitle" src="../assets/pokemonggo.png" alt="">
   </header>
 
   <div class="pokemon-details f" id="pokemonDetails"></div>

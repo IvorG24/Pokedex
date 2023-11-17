@@ -16,6 +16,7 @@ async function fetchData(url) {
   card.classList.add('pokemon-card');
   const name = document.createElement('h2');
   name.textContent = pokemon.name;
+  name.textTransform  = capitalize;
   card.appendChild(name);
   const image = document.createElement('img');
   image.src = pokemon.sprites.front_default;
