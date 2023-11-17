@@ -13,7 +13,10 @@
        
         /* Add your CSS styling here */
     section{
-     height: 160vh;
+     height: 120vh;
+     font-family: 'Righteous';
+     font-size: 18px;
+     font-weight: 100;
         }
     .section {
     display: grid;
@@ -24,75 +27,75 @@
     color: #8E4106;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
 
-.logo__text{
-    font-size: 32px;
-    font-weight: 100;
-}
+    .logo__text{
+        font-size: 32px;
+        font-weight: 100;
+    }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr;
-}
-.title{
-    position: relative;
-    grid-column: 1/-1;
-    place-self: center;
-}
-.title__text{
-    color: #fff;
-    font-size: 20vw;
-}
-.title__transparent{
-    position: absolute;
-    color: #fff5;
-    font-size: 27vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    z-index: -1;
-}
-.info{
-    place-self: end start;
-}
-.info__title{
-    font-size: 64px;
-}
-.info__text{
-    font-size: 20px;
-    width: 500px;
-}
-.action{
-    place-self: end;
-    width: 400px;
-    height: 100px;
-    background-color: #8E4106;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    color: #fff;
-    text-decoration: none;
-}
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+    .title{
+        position: relative;
+        grid-column: 1/-1;
+        place-self: center;
+    }
+    .title__text{
+        color: #fff;
+        font-size: 20vw;
+    }
+    .title__transparent{
+        position: absolute;
+        color: #fff5;
+        font-size: 27vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        z-index: -1;
+    }
+    .info{
+        place-self: end start;
+    }
+    .info__title{
+        font-size: 64px;
+    }
+    .info__text{
+        font-size: 20px;
+        width: 500px;
+    }
+    .action{
+        place-self: end;
+        width: 400px;
+        height: 100px;
+        background-color: #8E4106;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
+        color: #fff;
+        text-decoration: none;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
 
-.pikachu-image{
-    position: absolute;
-    z-index: 50;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+    .pikachu-image{
+        position: absolute;
+        z-index: 50;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
         .pikachu-image {
             position: absolute;
             bottom: 0;
@@ -114,117 +117,115 @@ footer{
         
     </style>
     <title>Let's Go, Pikachu!</title>
-</head>
+        </head>
+        <body>
+        <section class="section w-full">
+            <header>
+                <div class="logo flex flex-row justify-start z-0">
+                    <img src="../assets/poke-bola.png" alt="poke-ball" class="logo__icon ">
+                    <div class="px-12">
+                        <h2 class="logo__text">Pokemon</h2>
+                    </div>  
+            </header>
 
-<body>
-    <section class="section w-full">
-    <header>
-        <div class="logo flex flex-row justify-start z-0">
-            <img src="../assets/poke-bola.png" alt="poke-ball" class="logo__icon ">
-            <div class="px-12">
-                <h2 class="logo__text">Pokemon</h2>
+            <main>
+                <div class="title z-50">
+                    <h2 class="title__text">Pikachu</h2>
+                    <span class="title__transparent z-auto">Pikachu</span>
+                </div>
+                <div class="info">
+                    <h2 class="info__title">Let's Go, Pikachu!</h2>
+                    <p class="info__text">
+                        He is loyal to Ash, brave in front of countless challenges and conveys emotions openly through facial expressions, noises and constant affirmation of who he is: “Pika, Pika, Pikachu!”
+                    </p>
+                </div>
+                <a href="pokelist.html" class="action">
+                    Start Now!
+                </a>
+            </main>
+            <footer class="text-3xl">
+                Gotta Catch Em' All!
+            </footer>
+            <img src="../assets/pikachu.png" alt="pikachu" class="pikachu-image">
+        </section>
+
+
+        <section class="h-50vh w-full bg-white">
+        <div class="container flex flex-col justify-center mx-auto">
+            <h1 class="text-center text-5xl mt-20 text-brownie">About Us</h1>
+            <div class="wrapper flex flex-row justify-center items-center mb-10">
+                <div class="left w-1/2 font-normal text-justify ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis perspiciatis voluptatibus assumenda architecto cum nemo quos, similique error vero aut sed voluptatum, officiis fuga optio dolores sint temporibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor veritatis cupiditate necessitatibus ullam? Officiis veritatis asperiores aspernatur explicabo ex consectetur, voluptatum rem consequatur culpa saepe natus, dolores velit consequuntur!</div>
+                <div class="right px-16">
+                    <div>
+                        <img src="../assets/ivor.jpg" alt="" class=" rounded-full w-64">
+                    </div>
+                
+                </div>
             </div>
+
+            <div class="wrapper flex flex-row justify-center items-center">
+                <div class="left px-16">
+                    <div>
+                        <img src="../assets/tanlee.png" alt="" class=" rounded-full w-64">
+                    </div>
+                </div>
             
-    </header>
-    <main>
-        <div class="title z-50">
-            <h2 class="title__text">Pikachu</h2>
-            <span class="title__transparent z-auto">Pikachu</span>
-        </div>
-        <div class="info">
-            <h2 class="info__title">Let's Go, Pikachu!</h2>
-            <p class="info__text">
-                He is loyal to Ash, brave in front of countless challenges and conveys emotions openly through facial expressions, noises and constant affirmation of who he is: “Pika, Pika, Pikachu!”
-            </p>
-        </div>
-        <a href="pokelist.html" class="action">
-            Start Now!
-        </a>
-    </main>
-    <footer>
-        Gotta Catch Em' All!
-    </footer>
-    <img src="../assets/pikachu.png" alt="pikachu" class="pikachu-image">
-    
-
-</section>
-<section class="h-70vh w-full bg-white">
-   <div class="container flex flex-col justify-center">
-    <h1 class="text-center text-5xl mt-20 ">About Us</h1>
-    <div class="wrapper flex flex-row justify-center items-center mb-10">
-        <div class="left w-1/2 font-normal text-justify ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis perspiciatis voluptatibus assumenda architecto cum nemo quos, similique error vero aut sed voluptatum, officiis fuga optio dolores sint temporibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor veritatis cupiditate necessitatibus ullam? Officiis veritatis asperiores aspernatur explicabo ex consectetur, voluptatum rem consequatur culpa saepe natus, dolores velit consequuntur!</div>
-        <div class="right px-16">
-            <div>
-                <img src="../assets/ivor.jpg" alt="" class=" rounded-full w-64">
+                <div class="right w-1/2 text-md text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis perspiciatis voluptatibus assumenda architecto cum nemo quos, similique error vero aut sed voluptatum, officiis fuga optio dolores sint temporibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor veritatis cupiditate necessitatibus ullam? Officiis veritatis asperiores aspernatur explicabo ex consectetur, voluptatum rem consequatur culpa saepe natus, dolores velit consequuntur!
+                
+                </div>
             </div>
-           
-        </div>
-    </div>
-
-    <div class="wrapper flex flex-row justify-center items-center">
-        <div class="left px-16">
-            <div>
-                <img src="../assets/tanlee.png" alt="" class=" rounded-full w-64">
-            </div>
-        </div>
-       
-        <div class="right w-1/2 text-md text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis perspiciatis voluptatibus assumenda architecto cum nemo quos, similique error vero aut sed voluptatum, officiis fuga optio dolores sint temporibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor veritatis cupiditate necessitatibus ullam? Officiis veritatis asperiores aspernatur explicabo ex consectetur, voluptatum rem consequatur culpa saepe natus, dolores velit consequuntur!
-           
-        </div>
-    </div>
-   
-   </div>
-   <hr class="h-0.5 w-[70%] bg-black mx-auto my-12">
-
-   <div class="flex flex-row justify-center items-center">
-    <div class="flex items-center w-[50%]">
-        <div class="w-[50%] mx-4">
-            <img src="/src/assets/tailwind.png" alt="tailwind">
-        </div>
-        <div class="w-[50%] mx-4">
-            <img src="/src/assets/css-html.jpg" alt="tailwind">
-        </div>
-        <div class="w-[50%] mx-4">
-            <img src="/src/assets/tailwind.png" alt="tailwind">
-        </div>
-        <div class="w-[50%] mx-4">
-            <img src="/src/assets/tailwind.png" alt="tailwind">
-        </div>
-    </div>
-</div>
-</section>
-<contact class=" bg-inherit h-[60vh] w-full">
-    <h1 class="text-center text-3xl font-bold">Contact Us</h1>
-    <div class="container flex flex-row justify-center items-end">
         
-        <div class="wrapper flex flex-col mx-auto flex-start ">
-           
-            <div class="left">
-                    <div class="wrapper">
-                        <div class="form flex flex-col ">
-                        <label for="subject" class="block font-bold mb-2">Subject</label>
-                        <input id="subject" class="border border-solid border-black mb-4 px-2 py-1 w-1/2" type="text" name="subject">
+        </div>
+        <hr class="h-0.5 w-[70%] bg-black mx-auto my-12">
 
-                        <label for="message" class="block font-bold mb-2">Message</label>
-                        <input id="message" class="border border-solid w-11 border-black mb-4 px-2 py-1" type="text" name="message">
+        <div class="flex flex-row justify-center items-center">
+            <div class="flex items-center w-[50%]">
+                <div class="w-[50%] mx-4">
+                    <img src="/src/assets/tailwind.png" alt="tailwind">
+                </div>
+                <div class="w-[50%] mx-4">
+                    <img src="/src/assets/css-html.jpg" alt="tailwind">
+                </div>
+                <div class="w-[50%] mx-4">
+                    <img src="/src/assets/tailwind.png" alt="tailwind">
+                </div>
+                <div class="w-[50%] mx-4">
+                    <img src="/src/assets/tailwind.png" alt="tailwind">
+                </div>
+            </div>
+        </div>
+        </section>
 
+        <contact class=" bg-inherit h-[60vh] w-full">
+            <h1 class="text-center text-3xl font-bold">Contact Us</h1>
+            <div class="container flex flex-row justify-center items-end">
+                
+                <div class="wrapper flex flex-col mx-auto">
+                    <div class="left">
+                        <div class="wrapper">
+                            <div class="form flex flex-col px-4 py-6 bg-white shadow-md rounded-md">
+                                <label for="subject" class="block font-bold mb-2 text-gray-700">Subject</label>
+                                <input id="subject" class="border border-solid border-gray-300 mb-4 px-2 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="text" name="subject">
+                                
+                                <label for="message" class="block font-bold mb-2 text-gray-700">Message</label>
+                                <!-- Increased height for the message box -->
+                                <textarea id="message" class="border border-solid border-gray-300 mb-4 px-2 py-1 w-full h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
 
+                    <div class="right">
+                        <div class="mx-auto">
+                            <img class="" src="../assets/ash-point.png" alt="">
                         </div>
                         
                     </div>
                 </div>
             </div>
-
-
-            <div class="right">
-                <div class="mx-auto">
-                    <img class="" src="../assets/ash-point.png" alt="">
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</contact>
-</body>
-</html>
+        </contact>
+        </body>
+        </html>
