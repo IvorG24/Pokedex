@@ -97,11 +97,23 @@
         align-items: end;
     }
 
+    p{
+        font-weight: 100;
+    }
+
+    h1{
+        color: #8E4106;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    h2{
+        cursor: pointer;
+    }
     .pikachu-image{
         position: absolute;
         z-index: 50;
         top: 50%;
-        left: 50%;
+        left: 35%;
         transform: translate(-50%, -50%);
     }
         .pikachu-image {
@@ -134,7 +146,7 @@
                 <div class="logo flex flex-row justify-start z-0">
                     <img src="../assets/poke-bola.png" alt="poke-ball" class="logo__icon ">
                     <div class="px-12">
-                        <h2 class="logo__text">Pokemon</h2>
+                        <a href="https://www.pokemon.com/us"><h2 class="logo__text">Pokemon</h2></a>
                     </div>  
             </header>
 
@@ -164,9 +176,10 @@
         <div class="container flex flex-col justify-center mx-auto">
             <h1 class="text-center text-5xl mt-20 text-brownie">About Us</h1>
             <div class="wrapper flex flex-row justify-center items-center mb-10">
-                <div class="left w-1/2text-justify block ">
-                    <h1>Ivor Gloriso</h1>
+                <div class="left w-1/2 text-justify block ">
+                    <h1>Ivor Glorioso</h1>
                     <h3 class="font-light">A young, dynamic individual passionately exploring the world of technology.</h3>
+                    <p>Ivor's expertise lies in the intersection of computer engineering and web development. He has honed his skills in programming languages such as Python, JavaScript, and HTML/CSS, enabling him to build robust and user-friendly web applications. His projects often reflect a blend of technical proficiency and creative problem-solving.</p>
                 </div>
                 <div class="right px-16">
                     <div>
@@ -184,7 +197,9 @@
                 </div>
             
                 <div class="right w-1/2 text-md text-justify">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nobis perspiciatis voluptatibus assumenda architecto cum nemo quos, similique error vero aut sed voluptatum, officiis fuga optio dolores sint temporibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolor veritatis cupiditate necessitatibus ullam? Officiis veritatis asperiores aspernatur explicabo ex consectetur, voluptatum rem consequatur culpa saepe natus, dolores velit consequuntur!
+                    <h1>Stanlee Inosanto</h1>
+                    <h3 class="font-light">A young, dynamic individual passionately exploring the world of technology.</h3>
+                    <p>As an aspiring web developer, Stanlee aims to contribute to the tech industry by creating impactful web solutions. He is particularly interested in developing applications that improve user experience and accessibility, believing that technology should be inclusive and beneficial to all.</p>
                 
                 </div>
             </div>
@@ -210,34 +225,6 @@
         </div>
         </section>
 
-        <contact class=" bg-inherit h-[60vh] w-full">
-            <h1 class="text-center text-2xl font-bold">Contact Us</h1>
-            <div class="container flex flex-row justify-center items-end">
-                
-                <div class="wrapper flex flex-col mx-auto">
-                    <div class="left">
-                        <div class="wrapper">
-                            <div class="form flex flex-col px-4 py-6 bg-white shadow-md rounded-md">
-                                <label for="subject" class="block font-bold mb-2 text-gray-700">Subject</label>
-                                <input id="subject" class="border border-solid border-gray-300 mb-4 px-2 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" type="text" name="subject">
-                                
-                                <label for="message" class="block font-bold mb-2 text-gray-700">Message</label>
-                                <!-- Increased height for the message box -->
-                                <input id="message" class="border border-solid border-gray-300 mb-4 px-10 py-1 w-full h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="message"></input>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-
-                    <div class="right">
-                        <div class="mx-auto">
-                            <img class="" src="../assets/ash-point.png" alt="">
-                        </div>
-                        
-                    </div>
-                </div>
             </div>
         </contact>
         </body>
