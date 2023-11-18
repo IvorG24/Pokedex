@@ -8,40 +8,44 @@
     /* Basic styling for Pokémon details */
     
     body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   position: relative; /* Add positioning context */
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('../assets/poke-open.gif') fixed center;
-  background-size: cover;
-  z-index: -1; /* Send it to the back */
-  opacity: 0.8; /* Adjust the opacity if needed */
-}
-
-body {
+  body {
   background: linear-gradient(to bottom, rgba(228, 46, 5, 0.97), #f4f4f400);
-  z-index: 1;
   position: relative; /* Ensure the z-index works */
-  animation: fade-in 4s forwards;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 10;
 }
 
-@keyframes fade-in {
+body.fade-in {
+  animation: fadeInContent 4s forwards; /* Animation to fade in the content */
+}
+
+@keyframes fadeInContent {
   from {
-    opacity: 0;
+    opacity: 1;
   }
   to {
     opacity: 1;
   }
 }
+
+body::before {
+  content: "";
+  position: fixed; /* Keeps the pokeball fixed in position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/circle.gif') center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
 
 header {
   color: white;
@@ -63,60 +67,61 @@ p {
   color: #555; /* Set a slightly lighter color for descriptions */
 }
 
-.abilities,
-.moves {
+/* Base styling for abilities and moves */
+.abilities, .moves {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
+  border: 3px solid #00ff00; /* Neon green border for an arcade feel */
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
+  background: #000; /* Dark background typical of arcade screens */
+  box-shadow: 0 0 15px #00ff00; /* Glowing effect */ /* Pixelated font for the retro arcade look */
+  color: #ffffff; /* Light text color for contrast */
 }
 
-.abilities h3,
-.moves h3 {
-  color: #000; /* Set a dark color for section headers */
-}
+/* Section headers */
 
+/* Style for lists */
 ul {
   list-style: none;
-  padding: 0;
+  padding: 20px;
+  display: flex;
 }
 
-.abilities div,
-.moves div {
-  border: 1px solid #000;
+/* Individual items in abilities and moves */
+.abilities div, .moves div {
+  border: 1px solid rgb(255, 187, 0); /* Matching neon green borders */
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+  box-shadow: 0 0 5px rgb(5, 233, 5); /* Add a subtle glow */
+  color: #ffffff; /* Ensure text is readable */
+ 
 }
 
-    .moves {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #000; /* Add your desired border properties here */
-  border-radius: 10px; /* Adjust the border-radius according to your preference */
-  padding: 10px; /* Add padding for better visual appearance */
+/* Additional styling for moves */
+.moves {
+  border: 2px solid #ff0000; /* Different color border for differentiation */
+  box-shadow: 0 0 15px #ff0000; /* Glowing effect in a different color */
 }
 
 .pokemontitle{
-  width: 25%;
+  width: 15%;
 }
 
   </style>
 </head>
-<body>
+<body class="hide-content">
 
   <header class="flex flex-row">
-   <img class="pokemontitle" src="../assets/pokemonggo.png" alt="">
+    <img class="pokemontitle" src="../assets/pokemonggo.png" alt="">
   </header>
 
-  <div class="pokemon-details f" id="pokemonDetails"></div>
-
+  <div class="pokemon-details" id="pokemonDetails"></div>
   <script>
     async function fetchData(url) {
       try {
@@ -128,18 +133,31 @@ ul {
       }
     }
 
+    document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.body.classList.remove('hide-content'); // Remove the class that hides content
+    document.body.classList.add('fade-in'); // Add class to start fade-in animation
+  }, 5000); // Replace 5000 with the duration of your GIF in milliseconds
+});
+
     function displayPokemonDetails(pokemon, description, abilities, moves) {
       const pokemonDetailsDiv = document.getElementById('pokemonDetails');
       const name = document.createElement('h2');
       name.textContent = pokemon.name;
+      name.style.textTransform = 'capitalize'
+      name.style.fontSize ='30px'
+      name.style.color ='#f0e11f'
       pokemonDetailsDiv.appendChild(name);
       const image = document.createElement('img');
       image.src = pokemon.sprites.front_default;
       image.alt = pokemon.name;
-      image.style.width = '30%'
+      image.style.width = '25%'
+      image.style.display = 'flex justify-content-center align-items-center'
       pokemonDetailsDiv.appendChild(image);
       const descriptionParagraph = document.createElement('p');
       descriptionParagraph.textContent = description;
+      descriptionParagraph.style.fontSize = '20px'
+      descriptionParagraph.style.color = '#f0e11f'
       pokemonDetailsDiv.appendChild(descriptionParagraph);
 
       // Display abilities
@@ -206,7 +224,7 @@ ul {
       const moves = pokemonData.moves.slice(0, 5).map(move => move.move.name); // Displaying the first 5 moves for each Pokémon
       return moves;
     }
-
+    
     // Load Pokémon details, description, abilities, and moves based on the ID from the URL parameter
     const pokemonId = getQueryParam('id');
     if (pokemonId) {

@@ -10,7 +10,10 @@
     <link href="../../dist/output.css" rel="stylesheet">
     <style>
 
-       
+       body{
+        margin: 0;
+        padding: 0;
+       }
         /* Add your CSS styling here */
     section{
      height: 120vh;
@@ -18,6 +21,7 @@
      font-size: 18px;
      font-weight: 100;
         }
+     
     .section {
     display: grid;
     grid-template-rows: 100px 1fr 100px;
@@ -31,11 +35,14 @@
         display: flex;
         align-items: center;
         gap: 24px;
+        z-index: 1000;
+        position: absolute;
     }
 
     .logo__text{
         font-size: 32px;
         font-weight: 100;
+        z-index: 1000;
     }
 
     main{
@@ -47,32 +54,33 @@
         position: relative;
         grid-column: 1/-1;
         place-self: center;
+        z-index: 2;
     }
     .title__text{
         color: #fff;
-        font-size: 20vw;
+        font-size: 15vw;
     }
     .title__transparent{
         position: absolute;
         color: #fff5;
-        font-size: 27vw;
+        font-size: 29vw;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -80%);
         z-index: -1;
     }
     .info{
-        place-self: end start;
+        place-self: center start;
     }
     .info__title{
-        font-size: 64px;
+        font-size: 50px;
     }
     .info__text{
         font-size: 20px;
         width: 500px;
     }
     .action{
-        place-self: end;
+        place-self:center end;
         width: 400px;
         height: 100px;
         background-color: #8E4106;
@@ -114,7 +122,9 @@
                 transform: translateX(0);
             }
         }
-        
+        .grayscale img {
+    filter: grayscale(100%);
+}
     </style>
     <title>Let's Go, Pikachu!</title>
         </head>
@@ -139,7 +149,7 @@
                         He is loyal to Ash, brave in front of countless challenges and conveys emotions openly through facial expressions, noises and constant affirmation of who he is: “Pika, Pika, Pikachu!”
                     </p>
                 </div>
-                <a href="pokelist.html" class="action">
+                <a  href="pokelist.html" class="action flex items-center mb-20">
                     Start Now!
                 </a>
             </main>
@@ -150,7 +160,7 @@
         </section>
 
 
-        <section class="h-50vh w-full bg-white">
+        <section class="about h-50vh w-full bg-white">
         <div class="container flex flex-col justify-center mx-auto">
             <h1 class="text-center text-5xl mt-20 text-brownie">About Us</h1>
             <div class="wrapper flex flex-row justify-center items-center mb-10">
@@ -177,21 +187,21 @@
             </div>
         
         </div>
-        <hr class="h-0.5 w-[70%] bg-black mx-auto my-12">
-
-        <div class="flex flex-row justify-center items-center">
-            <div class="flex items-center w-[50%]">
-                <div class="w-[50%] mx-4">
+        <hr class="h-0.5 w-[70%] bg-gray-200 mx-auto my-12">
+        <h1 class="text-center text-lg">Techonology Stack</h1>
+        <div class="flex flex-row justify-center items-center ">
+            <div class="flex items-center w-[50%] ">
+                <div class="w-[50%] mx-4 grayscale ">
                     <img src="/src/assets/tailwind.png" alt="tailwind">
                 </div>
-                <div class="w-[50%] mx-4">
+                <div class="w-[50%] mx-4 grayscale">
                     <img src="/src/assets/css-html.jpg" alt="tailwind">
                 </div>
-                <div class="w-[50%] mx-4">
-                    <img src="/src/assets/tailwind.png" alt="tailwind">
+                <div class="w-[50%] mx-4 grayscale">
+                    <img src="/src/assets/js.png" alt="tailwind">
                 </div>
-                <div class="w-[50%] mx-4">
-                    <img src="/src/assets/tailwind.png" alt="tailwind">
+                <div class="w-[50%] mx-4 grayscale">
+                    <img src="/src/assets/pokeapi.png" alt="tailwind">
                 </div>
             </div>
         </div>
@@ -210,7 +220,7 @@
                                 
                                 <label for="message" class="block font-bold mb-2 text-gray-700">Message</label>
                                 <!-- Increased height for the message box -->
-                                <textarea id="message" class="border border-solid border-gray-300 mb-4 px-2 py-1 w-full h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="message"></textarea>
+                                <input id="message" class="border border-solid border-gray-300 mb-4 px-10 py-1 w-full h-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" name="message"></input>
                             </div>
                         </div>
                     </div>

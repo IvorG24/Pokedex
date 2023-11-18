@@ -9,6 +9,10 @@ async function fetchData(url) {
     }
   }
   
+  function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
   function displayPokemon(pokemon) {
    
   const pokemonListDiv = document.getElementById('pokemonList');
@@ -16,7 +20,7 @@ async function fetchData(url) {
   card.classList.add('pokemon-card');
   const name = document.createElement('h2');
   name.textContent = pokemon.name;
-  name.textTransform  = capitalize;
+  name.style.textTransform = 'capitalize'
   card.appendChild(name);
   const image = document.createElement('img');
   image.src = pokemon.sprites.front_default;

@@ -15,7 +15,7 @@ body {
     align-items: center;
   }
   nav {
-    background-color: #f72c2c;
+    background-color: #ee4545;
     overflow: hidden;
   }
   
@@ -64,7 +64,7 @@ body {
     font-size: 17px;
     background: #333;
     color: white;
-    border: none;
+    border-radius: 10px;
     cursor: pointer;
   }
   
