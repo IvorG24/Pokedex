@@ -3,11 +3,11 @@
 @tailwind utilities;
 /* Basic styling for the navigation bar */
 body {
-    font-family: 'Righteous', cursive;
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
-    height: 300vh;
-    background: linear-gradient(165deg, rgba(255, 255, 255, 1), rgba(250, 240, 240, 1))
+    height: 265vh;
+    background: linear-gradient(to bottom, rgba(224, 11, 11, 0.295), rgb(240, 240, 75))
   }
   
   img{
@@ -17,6 +17,7 @@ body {
   nav {
     background-color: #ee4545;
     overflow: hidden;
+   
   }
   
   .wrapper{
@@ -24,9 +25,17 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    color: rgb(255, 187, 0);
   }
+
+
+/* Style for the PokeLogo Image */
+.pokelogo {
+    width: 15%; /* Adjust the width as necessary */
+    /* ... other styles ... */
+}
   .right{
-    padding-right: 200px;
+    padding-right: 0px;
   }
   .left{
     display: flex;
@@ -49,12 +58,22 @@ body {
     border-bottom: 1px solid rgb(240, 233, 233); /* Change the color and size as needed */
     
   }
-
+  .class{
+    display: flex;
+  }
+  .pokelogo{
+    width: 30%;
+  }
+  .middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   input[type=text] {
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
-    border: none;
+    border-radius: 10px;
   }
   
   button {
@@ -71,6 +90,7 @@ body {
   button:hover {
     background: #ddd;
     color: black;
+    transition: 1s;
   }
   
   .pokemon-card {
